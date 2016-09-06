@@ -25,6 +25,7 @@ def bubble_sort(lst):
             #of the outter loop. If the 'if' condition is not satisfied
             #in that loop, swap will remain False and it will break. 
             break
+    return lst
 
 
 
@@ -71,7 +72,34 @@ def merge_sort(lst):
     >>> merge_sort([6, 2, 3, 9, 0, 1])
     [0, 1, 2, 3, 6, 9]
     """
-    pass
+    #Base Case: What is the list only has one item in it? 
+    if len(lst) < 2: 
+        return lst
+
+    #Take the length of the list and divide it by two. If it returns a float (like 3.5)
+    #then return the integer value of that (rounding down which would be 3). This is the 
+    #index at which the partition will occur. 
+    middle = int(len(lst)/2)
+
+    #Partition the list around the middle index. 
+    list1 = lst[:middle]
+    list2 = lst[middle:]
+
+    #Apply merge sort again (find the middle and partition.) This will continue to happen
+    #Until the partitioned list has only one item in it. At that point it will call the function
+    #merge_lists, which compares the element of each single item list and pops the smallest into the front
+    #of new_list. This happens until the entire list is sorted. 
+    list1= merge_sort(list1)
+    list2= merge_sort(list2)
+
+    new_list = merge_lists(list1, list2)
+
+    return new_list
+
+
+
+
+
 
 
 
