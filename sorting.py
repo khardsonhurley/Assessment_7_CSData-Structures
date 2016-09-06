@@ -6,7 +6,27 @@ def bubble_sort(lst):
         >>> bubble_sort([3, 5, 7, 2, 4, 1])
         [1, 2, 3, 4, 5, 7]
     """
-    pass
+    #Iterate of the list for the length of the list -1. It is -1
+    #because the range starts at 0.
+    for i in range(len(lst)-1):
+        swap=False
+        #-i here so that you do not check what has already been sorted
+        #keeping in mind with bubble sort the largest numbers bubble
+        #to the end as it recurses, so subtracting i allows you to 
+        #not check those that have already bubbled to the end. 
+        for j in range(len(lst)-1-i):
+            if lst[j] > lst[j+1]:
+                #Swapping because the left is bigger than the right. 
+                lst[j], lst[j+1] = lst[j+1],lst[j]
+                swap=True
+        if not swap:
+            #If swap is False when you get here, then the list is 
+            #sorted. This will happen when it goes back to the top
+            #of the outter loop. If the 'if' condition is not satisfied
+            #in that loop, swap will remain False and it will break. 
+            break
+
+
 
 
 def merge_lists(list1, list2):
