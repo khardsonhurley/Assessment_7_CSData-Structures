@@ -35,8 +35,28 @@ def merge_lists(list1, list2):
     >>> merge_lists([1, 3, 9], [4, 7, 11])
     [1, 3, 4, 7, 9, 11]
     """
+    new_list = []
 
-    pass
+    #Checking for empty lists here. 
+    while len(list1)>0 or len(list2)>0:
+        #If list 1 is empty, then add the first element of list 2. Popping it off. 
+        if not list1:
+            new_list.append(list2.pop(0))
+        #If list 2 is empty, then add the first element of list 1. Popping it off.
+        elif not list2:
+            new_list.append(list1.pop(0))
+        #If the first element in list 1 is bigger than the first element in list 2, 
+        #then pop the first element of list two and append it to the result list. 
+        elif list1[0]>list2[0]:
+            new_list.append(list2.pop(0))
+        #Otherwise pop the first element of list one and append it to the result list. 
+        else:
+            new_list.append(list1.pop(0))
+
+    return new_list
+
+
+
 
 
 ##########ADVANCED##########
