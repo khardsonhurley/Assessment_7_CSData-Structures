@@ -1,0 +1,73 @@
+############################# RECURSION ###############################
+1. In your own words, what is Recursion?
+
+Recursion is the process of a function calling itself. It is clear that
+a recursive function is needed when the same steps are repeated and
+the result of a function is continguent on the response received from the 
+previous function call. 
+
+2. Why is it necessary to have a Base Case?
+
+A Base Case is needed to define a scenario that does not require recursion. 
+In computer science, you need to be able to tell the function what to do
+when it stops recursing. When defining my base case, I think of it like this:
+
+"What is the smallest version of this data type that I can apply this logic to?
+What should happen when the function arrives at the base case?"
+
+############################## GRAPHS ################################
+1. What is a Graph?
+A graph is a group of nodes that are connected by edges. Graphs are 
+non-directed, meaning there is not a node that is at the top of the graph
+as we have seen in a tree. Each node has what is called an adjacency list 
+which contains all of the nodes that are directly connected to it (adjacent). 
+
+2. How is a Graph different from a Tree?
+A graph is much like a tree, except that it contains loops. In a tree
+the relationships are one direction, but in a graph they can be directed
+or non-directed (meaning they go both directions).
+
+3. Give an example of somthing that would be good to model with a Graph.
+
+The best example that I like to use for a graph is Facebook. The connections between friends demonstrate a social graph. The people are the nodes and the edges are the friendships. At the state where all friends are connected it is a undirected graph. The graph of friend requests is a directed graph because only one person can request to be a friend (one direction). Facebook graph is also cyclic since there is no inherent hierarchy. An example of an Acyclic graph is a tree. 
+
+############## Performance of Different Data Structures ##############
+
+
+Data Structure				Index	Search	Add-R	Add-L	Pop-L	Pop-R
+
+Python List (Array)			O(1)	O(n)	O(1)
+
+Linked List
+
+Doubly-Linked List
+
+Queue (as Array)			  X		  X	 			 X 	 			  X
+
+Queue (as LL or DLL)		  X		  X	 			 X	 			  X
+
+Stack (as Array, LL, or DLL)  X		  X	 			 X		 X	 
+
+Deque (as DLL)				  X		  X	 	 	 	 
+
+##RUNTIME AND MEMORY##
+
+Data Structure				Get		Add		Delete		Iterate		Memory
+
+Dictionary (Hash Map)		O(1)	O(1)	O(1)		O(n)		medium
+
+Set (Hash Map)	 	 	 	 	 
+
+Binary Search Tree	 	 	 	 	 
+
+Tree	
+
+############################## SORTING ################################
+1. Describe in words how the Bubble Sort algorithm works.
+2. Describe in words how the Merge Sort algorithm works.
+3. Describe in words how the Quick Sort algorithm works. 
+
+########################### GIT BRANCHING #############################
+1. Give an instance when you would use git branching.
+2. What is a pull request?
+
